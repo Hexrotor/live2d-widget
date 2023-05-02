@@ -51,7 +51,8 @@ function loadWidget(config) {
             const domains = {
                 "baidu": "百度",
                 "so": "360搜索",
-                "google": "谷歌搜索"
+                "google": "谷歌搜索",
+                "bing": "必应搜索"
             };
             if (location.hostname === referrer.hostname) return text;
 
@@ -128,8 +129,8 @@ function loadWidget(config) {
             modelTexturesId = localStorage.getItem("modelTexturesId");
         if (modelId === null) {
             // 首次访问加载 指定模型 的 指定材质
-            modelId = 1; // 模型 ID
-            modelTexturesId = 53; // 材质 ID
+            modelId = 4; // 模型 ID
+            modelTexturesId = 1; // 材质 ID
         }
         model.loadModel(modelId, modelTexturesId);
         fetch(config.waifuPath)
